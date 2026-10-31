@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b16" />
+  <title>Ghostlight AI — Stories from the Other Side</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Ghostlight AI home"><span class="brand-mark">✦</span> GHOSTLIGHT <span class="brand-ai">AI</span></a>
+    <span class="privacy"><span class="pulse"></span> YOUR STORIES STAY YOURS</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> AN OPEN-SOURCE AI EXPERIMENT</div>
+      <h1>Some stories never<br />leave the <em>dark.</em></h1>
+      <p class="hero-copy">A little haunted. A little heartfelt. Create an eerie tale or preserve a memory with an AI that can run right in your browser.</p>
+      <div class="hero-tags"><span>☾ Browser-based AI</span><span>✧ No account</span><span>⌁ No app server</span></div>
+    </section>
+
+    <section class="workspace">
+      <div class="tabs" role="tablist" aria-label="Creation mode">
+        <button class="tab active" data-mode="ghost" role="tab" aria-selected="true">☾ Ghost Story</button>
+        <button class="tab" data-mode="memory" role="tab" aria-selected="false">✿ Memory Keeper</button>
+      </div>
+
+      <div class="panel">
+        <div class="form-column">
+          <div class="section-kicker" id="mode-kicker">THE HAUNTED ARCHIVE / 001</div>
+          <h2 id="form-title">Summon a story</h2>
+          <p class="muted" id="form-description">Give the unknown a place, a feeling, and a secret.</p>
+
+          <form id="create-form">
+            <label for="subject" id="subject-label">Where does the haunting begin?</label>
+            <input id="subject" maxlength="100" placeholder="An abandoned railway station..." required />
+
+            <label for="mood" id="mood-label">Choose your atmosphere</label>
+            <select id="mood">
+              <option>Quietly unsettling</option>
+              <option>Full of dread</option>
+              <option>Melancholy and beautiful</option>
+              <option>Folklore and mystery</option>
+            </select>
+
+            <label for="details" id="details-label">Add a detail <span>(optional)</span></label>
+            <textarea id="details" rows="4" maxlength="600" placeholder="A clock that runs backward, a letter with no name..."></textarea>
+
+            <button class="primary" id="create-button" type="submit"><span>✧</span> <span id="button-label">Create my ghost story</span> <b>↗</b></button>
+          </form>
+          <div class="model-status" id="model-status"><span class="status-dot"></span><span>AI model has not been loaded yet.</span></div>
+          <button class="text-button" id="load-model" type="button">Load open model in this browser ↗</button>
+        </div>
+
+        <div class="output-column">
+          <div class="output-top"><span class="output-label">YOUR TRANSMISSION</span><span class="signal">● LIVE</span></div>
+          <div class="output" id="output" aria-live="polite">
+            <div class="empty-art" aria-hidden="true"><div class="moon"></div><div class="orb">✧</div><div class="horizon"></div></div>
+            <p class="output-placeholder">The archive is quiet.<br /><span>Write a prompt to awaken a story.</span></p>
+          </div>
+          <div class="output-actions">
+            <span id="output-note">Generated locally when the model is available.</span>
+            <button id="copy-button" type="button" disabled>Copy text ⧉</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-symbol">✺</div>
+      <div><div class="section-kicker">WHY OPEN INNOVATION?</div><h3>Some things should stay close to home.</h3><p>Ghostlight is built around an open-weight language model running in your browser through Transformers.js. Once the model files are cached, generation can work without sending your prompts to a separate AI service. Your memories deserve a quiet place, not another account.</p></div>
+    </section>
+  </main>
+
+  <footer><span>GHOSTLIGHT AI © 2026</span><span>Made for the spaces between memory and myth.</span><span>OPEN BY DESIGN ✦</span></footer>
+</body>
+</html>
